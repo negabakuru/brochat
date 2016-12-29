@@ -5,7 +5,7 @@
   },
   "name": "brochat",
   "description": "Simple chat using spacebro",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "main": "client.js",
   "bin": {
     "brochat": "bin/brochat"
