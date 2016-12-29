@@ -71,7 +71,7 @@ spacebroClient.on('new-message', (data) => {
 	chatHistory.push(newMessage)
     }
 
-    console.log('\033c')
+    console.log('\x1Bc')
     chatHistory.forEach((message) => {
 	console.log(message)
     })
