@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "commander": "^2.9.0",
+    "spacebro-client": "^0.2.1"
+  },
+  "name": "brochat",
+  "description": "Simple chat using spacebro",
+  "version": "0.0.1",
+  "main": "client.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ybeaufort/brochat.git"
+  },
+  "keywords": [
+    "spacebro",
+    "chat"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ybeaufort/brochat/issues"
+  },
+  "homepage": "https://github.com/ybeaufort/brochat#readme"
+}
