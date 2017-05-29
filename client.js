@@ -41,7 +41,8 @@ function parseArgs () {
   program.parse(process.argv)
 
   if (!hostValue || !portValue) {
-    console.log(!hostValue ? 'No host given.' : 'No port given.')
+    program.outputHelp()
+    console.log(!hostValue ? '\nNo host given.' : 'No port given.')
     process.exit()
   }
 
@@ -50,12 +51,20 @@ function parseArgs () {
 }
 
 function startChat (data) {
+  displayMessages()
   addEvents()
-  spacebroClient.emit('user-connected', {username: username})
+  spacebroClient.emit('user-connected', { username: username })
 }
 
 function addEvents () {
-  spacebroClient.on('user-connected', function (data) { console.log(`${data.username} has connected !`) })
+  spacebroClient.on('user-connected', function (data) {
+    addNewMessage({
+      timestamp: getTime(),
+      user: '',
+      message: `${data.username} has connected !`
+    })
+    displayMessages()
+  })
 
   rl.on('line', (input) => {
     let time = getTime()

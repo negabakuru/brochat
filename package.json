@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "commander": "^2.9.0",
-    "spacebro-client": "^0.2.1"
+    "spacebro-client": "^0.3.4"
   },
   "name": "brochat",
   "description": "Simple chat using spacebro",
